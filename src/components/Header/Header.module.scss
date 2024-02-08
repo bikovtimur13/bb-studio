@@ -1,0 +1,20 @@
+@import 'styles/variables';
+
+.header{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 10;
+
+    padding-top: 1rem;
+    // padding-top: 0.6rem /*!main_margin*/;
+    padding-bottom: 0.6rem /*!main_margin*/;
+    padding-left: 0.6rem /*!main_margin*/;
+    padding-right: 0.6rem /*!main_margin*/;
+
+    &__container{
+        display: flex;
+        justify-content: space-between;
+    }
+}

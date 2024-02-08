@@ -1,0 +1,60 @@
+/* Yamaguchi mixins */
+
+
+/* BREAKPOINTS */
+$nlgx-media: 1700px;
+$nlgm-media: 1421px;
+$nlg-media: 1241px;
+$nlgs-media: 1101px;
+$nmd-media: 1024px;
+$nsm-media: 768px;
+$nxs-media: 451px;
+$nxxs-media: 351px;
+
+@mixin nlgx { 
+  @media all and (max-width: #{$nlgx-media}) {
+    @content;
+  }
+}
+
+@mixin nlgm {
+  @media all and (max-width: #{$nlgm-media}) {
+    @content;
+  }
+}
+
+@mixin nlg {
+  @media all and (max-width: #{$nlg-media}) {
+    @content;
+  }
+}
+
+@mixin nlgs {
+  @media all and (max-width: #{$nlgs-media}) {
+    @content;
+  }
+}
+
+@mixin nmd {
+  @media all and (max-width: #{$nmd-media}) {
+    @content;
+  }
+}
+
+@mixin nsm {
+  @media all and (max-width: #{$nsm-media}) {
+    @content;
+  }
+}
+
+@mixin nxs {
+  @media all and (max-width: #{$nxs-media}) {
+    @content;
+  }
+}
+
+@mixin nxxs {
+  @media all and (max-width: #{$nxxs-media}) {
+    @content;
+  }
+}
