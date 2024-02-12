@@ -37,6 +37,7 @@ next-env.d.ts
 
 .vscode
 
+
 .yarn
 /.yarn
 /.yarn/install-state.gz
