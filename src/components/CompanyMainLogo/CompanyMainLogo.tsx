@@ -3,7 +3,7 @@ import styles from './CompanyMainLogo.module.scss';
 const CompanyMainLogo = () => {
     return (
         <div className={styles.logo}>
-            Logo
+
         </div>
     );
 }

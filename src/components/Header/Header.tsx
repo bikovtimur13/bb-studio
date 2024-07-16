@@ -10,7 +10,7 @@ const Header = () => {
     return (
         <div className={styles.header}>
             <div className={styles.header__container}>
-                <CompanyMainLogo/>
+                <CompanyMainLogo />
             </div>
         </div>
     );
