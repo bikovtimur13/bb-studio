@@ -1,9 +1,11 @@
 @import 'styles/variables';
 
 .main{
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-color: #282826;
   &__container{
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
+
   }
 }

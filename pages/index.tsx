@@ -6,10 +6,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>KraftWeb Studio</title>
-        <meta name="description" content="KraftWeb Studio" />
+        <title>Дело Быкова</title>
+        <meta name="description" content="Дело Быкова" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="favicon/favicon.ico" />
       </Head>
     </>
   );
