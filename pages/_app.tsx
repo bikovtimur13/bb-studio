@@ -1,15 +1,15 @@
 import "@/styles/globals.css";
 import Header from '@/src/components/Header/Header';
-import MainContainer from '@/src/components/MainContainer/MainContainer';
+import Layout from '@/src/components/Layout/Layout';
 import type { AppProps } from 'next/app'
 import { FC, useState } from 'react';
 
 const App: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
   return <>
-    <MainContainer>
+    <Layout>
       <Header />
       <Component {...pageProps} />
-    </MainContainer>
+    </Layout>
   </>;
 }
 

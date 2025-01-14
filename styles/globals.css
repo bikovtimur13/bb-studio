@@ -75,6 +75,51 @@ ul li {
   list-style: none;
 }
 
-.container-box{
-  
+.container-box {
+  width: 1230px;
+  margin: 0 auto;
+  box-sizing: border-box
+}
+
+@media all and (max-width: 1240px) {
+  .container-box {
+      width:1023px;
+      padding-left: 16px;
+      padding-right: 16px
+  }
+}
+
+@media all and (max-width: 1240px) and (max-width:1023px) {
+  .container-box {
+      width:708px;
+      padding-left: 0;
+      padding-right: 0
+  }
+}
+
+@media all and (max-width: 1240px) and (max-width:1023px) and (max-width:767px) {
+  .container-box {
+      width:100%;
+      padding-left: 3%;
+      padding-right: 3%;
+  }
+}
+
+.main-wrapper {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden
+}
+
+@supports (overflow: clip) {
+  .main-wrapper {
+      overflow:clip
+  }
+}
+
+@media all and (max-width: 767px) {
+  .main-wrapper {
+      /* padding-top:24px */
+  }
 }

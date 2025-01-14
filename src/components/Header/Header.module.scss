@@ -1,11 +1,11 @@
 @import 'styles/variables';
 
 .header{
-    position: fixed;
-    top: 0px;
-    left: 0px;
+    // position: fixed;
+    // top: 0px;
+    // left: 0px;
     width: 100%;
-    z-index: 10;
+    z-index: 100;
 
     padding-top: 1rem;
     // padding-top: 0.6rem /*!main_margin*/;
@@ -16,5 +16,17 @@
     &__container{
         display: flex;
         justify-content: space-between;
+        color: #EAE3D0;
+    }
+
+    &__navLink{
+        font-size: 31.2399px;
+        line-height: 43px;
+        text-transform: capitalize;
+        color: #EAE3D0;
+    }
+    
+    &__navLinksContainer{
+
     }
 }
