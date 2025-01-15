@@ -12,6 +12,7 @@
   margin: 0;
   border: none;
   padding: 0;
+  box-sizing: border-box;
 }
 
 *,
@@ -23,8 +24,10 @@
 
 /* Body color */
 body{
-  background-color: rgb(255, 255, 255) /*!body_bgcolor*/;
+  /* background-color: rgb(255, 255, 255); */
+  background-color: #282826;
   font-family: 'Manrope', sans-serif;
+  font-style: normal;
 }
 
 

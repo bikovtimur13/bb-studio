@@ -4,6 +4,7 @@ import Layout from '@/src/components/Layout/Layout';
 import type { AppProps } from 'next/app'
 import { FC, useState } from 'react';
 import { usePathname } from 'next/navigation';
+import Hero from "@/src/components/Hero/Hero";
 
 const App: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
   const pathname = usePathname();

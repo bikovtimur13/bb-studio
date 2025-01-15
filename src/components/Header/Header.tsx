@@ -8,7 +8,6 @@ import styles from './Header.module.scss';
 import Link from 'next/link';
 
 /** внешний футер сайта */
-
 const navigation: NavigationType[] = [
     { name: "Разработка", href: "/", id: 1 },
     { name: "Продвижение", href: "/promotion", id: 2 },
@@ -31,7 +30,7 @@ const Header = ({ pathname }: HeaderProps) => {
                             <CompanyMainLogo />
                         </Link>
                     }
-                    <div className={styles.header__navLinksContainer}>
+                    <ul className={styles.header__navLinksContainer}>
                         {
                             navigation.map((item: NavigationType) => (
                                 <Link href={item.href}
@@ -41,7 +40,7 @@ const Header = ({ pathname }: HeaderProps) => {
                                 </Link>
                             ))
                         }
-                    </div>
+                    </ul>
                     <Link href='#contactUsForm' className={`${styles.header__contactUsBtn} ${mainPage}`}>Связаться</Link>
                 </nav>
             </header>
