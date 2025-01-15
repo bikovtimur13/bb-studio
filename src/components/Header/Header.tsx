@@ -23,7 +23,7 @@ const Header = () => {
         <div className='main-wrapper'>
             <header className={styles.header}>
                 <nav className={styles.header__container}>
-                    <Link href="/">
+                    <Link className={styles.header__logo} href="/">
                         <CompanyMainLogo />
                     </Link>
                     <div className={styles.header__navLinksContainer}>
@@ -35,6 +35,7 @@ const Header = () => {
                             ))
                         }
                     </div>
+                    <Link href='#contactUsForm' className={styles.header__contactUsBtn}>Связаться</Link>
                 </nav>
             </header>
         </div >

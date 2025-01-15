@@ -1,32 +1,65 @@
 @import 'styles/variables';
 
 .header{
-    // position: fixed;
-    // top: 0px;
-    // left: 0px;
+    position: static;
     width: 100%;
-    z-index: 100;
-
-    padding-top: 1rem;
-    // padding-top: 0.6rem /*!main_margin*/;
-    padding-bottom: 0.6rem /*!main_margin*/;
-    padding-left: 0.6rem /*!main_margin*/;
-    padding-right: 0.6rem /*!main_margin*/;
+    // z-index: 100;
+    padding-top: 4.2rem;
+    padding-bottom: 4.2rem;
+    padding-left: 2.3rem;
+    padding-right: 2.3rem;
 
     &__container{
         display: flex;
-        justify-content: space-between;
+        // justify-content: space-between;
         color: #EAE3D0;
+        align-items: center;
+    }
+
+    &__logo{
+        margin-right: clamp(50px, 5vw, 106px);
+        img{
+            width: clamp(200px, 18vw, 312px);
+        }
+        
     }
 
     &__navLink{
-        font-size: 31.2399px;
+        font-size: clamp(20px, 1.5vw, 31px);
         line-height: 43px;
         text-transform: capitalize;
         color: #EAE3D0;
+        margin-right: clamp(50px, 4vw, 87px);
+        transition: all .35s ease-in-out;
+
+        &:last-of-type{
+            margin-right: unset;
+        }
+
+        &:hover{
+            transform: translateY(-7px);
+        }
     }
     
     &__navLinksContainer{
+        display: flex;
+        align-items: center;
+        margin-right: Clamp(50px, 6vw, 67px);
+    }
 
+    &__contactUsBtn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #9048C9;
+        font-size: clamp(20px, 1.5vw, 25px);
+        padding-inline: clamp(33px, 2.5vw, 53px);
+        padding-block: clamp(12px, 2vw, 20px);
+        border-radius: 35px;
+        transition: all .35s ease-in-out;
+
+        &:hover{
+            transform: scale(1.05);
+        }
     }
 }

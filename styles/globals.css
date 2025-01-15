@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Manrope';
+  src: url('/fonts/manrope/Manrope-Regular.woff2') format('woff2'),
+       url('/fonts/manrope/Manrope-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -16,7 +24,10 @@
 /* Body color */
 body{
   background-color: rgb(255, 255, 255) /*!body_bgcolor*/;
+  font-family: 'Manrope', sans-serif;
 }
+
+
 
 /* Common */
 aside,
@@ -34,6 +45,7 @@ a,
 a:link,
 a:visited {
   text-decoration: none;
+  color: unset;
 }
 
 /* Form */
