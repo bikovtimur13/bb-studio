@@ -3,11 +3,14 @@ import Header from '@/src/components/Header/Header';
 import Layout from '@/src/components/Layout/Layout';
 import type { AppProps } from 'next/app'
 import { FC, useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 const App: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
+  const pathname = usePathname();
+
   return <>
     <Layout>
-      <Header />
+      <Header pathname={pathname || ''} />
       <Component {...pageProps} />
     </Layout>
   </>;

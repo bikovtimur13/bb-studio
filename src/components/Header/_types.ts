@@ -3,3 +3,7 @@ export type NavigationType = {
   href: string;
   id: number;
 };
+
+export type HeaderProps = {
+  pathname: string;
+};

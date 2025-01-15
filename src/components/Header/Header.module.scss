@@ -39,8 +39,30 @@
         &:hover{
             transform: translateY(-7px);
         }
-    }
+
+
+        &.main{
+            font-size: clamp(20px, 2vw, 39px);
+            line-height: 43px;
+            margin-right: clamp(71px, 5.2vw, 111px);
+            transition: all 0.35s ease-in-out;
     
+            &:first-of-type{
+                margin-left: 44px;
+            }
+            &:last-of-type{
+                margin-right: unset;
+            }
+        }
+
+        &.active{
+            text-decoration: underline;
+            text-decoration-thickness: 3px;
+            text-underline-offset: 16px;
+            transform: translateY(-7px);
+        }
+    }
+
     &__navLinksContainer{
         display: flex;
         align-items: center;
@@ -52,6 +74,7 @@
         align-items: center;
         justify-content: center;
         background: #9048C9;
+        color: #FFFFFF;
         font-size: clamp(20px, 1.5vw, 25px);
         padding-inline: clamp(33px, 2.5vw, 53px);
         padding-block: clamp(12px, 2vw, 20px);
@@ -60,6 +83,15 @@
 
         &:hover{
             transform: scale(1.05);
+        }
+
+        &.main{
+            background: #35F3C5;
+            color: #000000;
+            font-size: clamp(21px, 2vw, 33px);
+            padding-inline: clamp(33px, 2.5vw, 53px);
+            padding-block: clamp(12px, 2vw, 20px);
+            border-radius: 44px;
         }
     }
 }
