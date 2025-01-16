@@ -9,7 +9,7 @@ import Link from 'next/link';
 
 /** внешний футер сайта */
 const navigation: NavigationType[] = [
-    { name: "Разработка", href: "/", id: 1 },
+    { name: "Разработка", href: "/development", id: 1 },
     { name: "Продвижение", href: "/promotion", id: 2 },
     { name: "Кейсы", href: "/cases", id: 3 },
     { name: "Карьера", href: "/career", id: 4 },
@@ -30,7 +30,7 @@ const Header = ({ pathname }: HeaderProps) => {
                             <CompanyMainLogo />
                         </Link>
                     }
-                    <ul className={styles.header__navLinksContainer}>
+                    <div className={styles.header__navLinksContainer}>
                         {
                             navigation.map((item: NavigationType) => (
                                 <Link href={item.href}
@@ -40,7 +40,7 @@ const Header = ({ pathname }: HeaderProps) => {
                                 </Link>
                             ))
                         }
-                    </ul>
+                    </div>
                     <Link href='#contactUsForm' className={`${styles.header__contactUsBtn} ${mainPage}`}>Связаться</Link>
                 </nav>
             </header>

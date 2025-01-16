@@ -6,19 +6,45 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+
+  @include nlg{
+    height: 71vw;
+  }
 
   &__logo{
-    img{
-      margin: 0 auto;
-      width: 80%;
+    display: block;
+    width: 1158px;
+    transform: translateY(-47px);
+    z-index: 100;
+
+    @include nlg{
+      width: 92%;
     }
   }
 
   &__text{
     font-weight: 400;
-    font-size: 34.2772px;
+    font-size: 32.2772px;
     line-height: 112%;
     text-align: center;
     color: #FFFFFF;
+    z-index: 100;
+
+    @include nlg{
+      font-size: Clamp(20px, 2.5vw,32px);
+    }
+  }
+
+  &__imgPlaneContainer{
+    position: absolute;
+    top: 51%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    width: 1132px;
+
+    @include nlg{
+      width: 91%;
+    }
   }
 }

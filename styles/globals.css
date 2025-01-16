@@ -28,6 +28,7 @@ body{
   background-color: #282826;
   font-family: 'Manrope', sans-serif;
   font-style: normal;
+  color: #FFFFFF;
 }
 
 
@@ -93,6 +94,15 @@ ul li {
   width: 1230px;
   margin: 0 auto;
   box-sizing: border-box
+}
+
+.error-page{
+  display: flex;
+  justify-content: center;
+}
+
+.error-page__title{
+  font-size: 45px;
 }
 
 @media all and (max-width: 1240px) {

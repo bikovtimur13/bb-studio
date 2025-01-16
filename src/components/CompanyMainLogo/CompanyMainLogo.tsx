@@ -6,7 +6,7 @@ import logo from "/public/images/bb-main-logo.svg"
 const CompanyMainLogo = () => {
     return (
         <div className={styles.logo}>
-            <Image src={logo} alt="logo" />
+            <Image src={logo} width={100} height={100} layout='responsive' alt="logo" />
         </div>
     );
 }
