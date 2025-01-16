@@ -25,10 +25,19 @@
 /* Body color */
 body{
   /* background-color: rgb(255, 255, 255); */
-  background-color: #282826;
   font-family: 'Manrope', sans-serif;
   font-style: normal;
   color: #FFFFFF;
+
+  background-color: #282826;
+  background-image: repeating-linear-gradient(to right, #3F3E3A 0px, #3F3E3A 0px, transparent 1px, transparent 120px);
+  background-size: 136px 20px;
+  background-position: center;
+
+  @media all and (max-width: 768px) {
+    background-image: repeating-linear-gradient(to right, #3F3E3A 0px, #3F3E3A 0px, transparent 1px, transparent 8.8vw);
+    background-size: 10.5vw 20px;
+  }
 }
 
 
@@ -97,13 +106,19 @@ ul li {
 }
 
 .error-page{
+  height: 1100px;
   display: flex;
   justify-content: center;
+  background: url('/images/bb-error-404-v2.webp') no-repeat;
+  background-position: center;
+  /* background-size: cover; */
 }
 
 .error-page__title{
   font-size: 45px;
+  margin-bottom: 50px;
 }
+
 
 @media all and (max-width: 1240px) {
   .container-box {

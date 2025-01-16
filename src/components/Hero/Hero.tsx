@@ -6,7 +6,7 @@ import airplaneImg from "/public/images/bb-airplane-img.webp";
 import Link from 'next/link';
 import Image from 'next/image';
 
-/** Главный контейнер сайта */
+/** Баннер на главной */
 const Hero = () => {
   return (
     <div className='main-wrapper'>

@@ -4,7 +4,7 @@ import Layout from '@/src/components/Layout/Layout';
 import type { AppProps } from 'next/app'
 import { FC, useState } from 'react';
 import { usePathname } from 'next/navigation';
-import Hero from "@/src/components/Hero/Hero";
+import Footer from "@/src/components/Footer/Footer";
 
 const App: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
   const pathname = usePathname();
@@ -13,6 +13,7 @@ const App: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
     <Layout>
       <Header pathname={pathname || ''} />
       <Component {...pageProps} />
+      <Footer />
     </Layout>
   </>;
 }

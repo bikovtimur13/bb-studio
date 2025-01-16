@@ -7,7 +7,7 @@ import { HeaderProps, NavigationType } from './_types';
 import styles from './Header.module.scss';
 import Link from 'next/link';
 
-/** внешний футер сайта */
+/** внешний хедер сайта */
 const navigation: NavigationType[] = [
     { name: "Разработка", href: "/development", id: 1 },
     { name: "Продвижение", href: "/promotion", id: 2 },
