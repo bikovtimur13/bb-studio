@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import styles from './Footer.module.scss';
 
+import Link from 'next/link';
 import { FooterNavigationType } from './_types';
 
 /** внешний футер сайта */
@@ -19,7 +20,17 @@ const Footer = () => {
     <div className='main-wrapper'>
       <footer className={styles.footer}>
         <div className={styles.footer__container}>
-
+          <ul className={styles.footer__navLinksContainer}>
+            {
+              navigation.map((item: FooterNavigationType) => (
+                <Link href={item.href}
+                  className={styles.footer__navLinks}
+                >
+                  {item.name}
+                </Link>
+              ))
+            }
+          </ul>
         </div>
       </footer>
     </div>
