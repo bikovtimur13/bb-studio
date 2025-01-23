@@ -5,7 +5,12 @@
 
   &__container{
     display: flex;
-    padding: 60px 0px 150px;
+    padding: 60px 97px 150px 37px;
+    align-items: flex-start;
+
+    @include nsm{
+
+    }
   }
 
   &__logo{
@@ -29,14 +34,35 @@
   }
 
   &__navLi{
+    position: relative;
     flex: 1 1 50%; 
     box-sizing: border-box; 
     margin-bottom: 44px;
-    transition: all 0.35s ease-in-out;
+    transition: all 0.3s ease-in-out;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -18px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 12px;
+      height: 12px;
+      background-color: #EAE3D0;
+      border-radius: 50%;
+      border: 2px solid #333;
+      transition: all 0.2s ease-in-out .2s;
+      opacity: 0;
+      visibility: hidden;
+    }
 
     &:hover{
       cursor: pointer;
-      transform: translateX(7px);
+      transform: translateX(18px);
+    }
+    &:hover::before{
+      opacity: 1;
+      visibility: visible;
     }
   }
 }

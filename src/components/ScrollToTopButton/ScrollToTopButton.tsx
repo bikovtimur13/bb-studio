@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Image from 'next/image';
 
+import styles from './ScrollToTopButton.module.scss';
 import faArrowUp from "/public/images/icons/bb-to-top-scroll-btn.svg";
 
 const ScrollToTopButton = () => {
@@ -15,11 +16,9 @@ const ScrollToTopButton = () => {
   };
 
   return (
-    <>
-      <button onClick={scrollToTop}>
-        <Image src={faArrowUp} width={67} height={67} layout='responsive' alt="logo" />
-      </button>
-    </>
+    <button className={styles.scrollToTop} onClick={scrollToTop}>
+      <Image src={faArrowUp} width={67} height={67} layout='responsive' alt="scroll To Top Button" />
+    </button>
   );
 
 
