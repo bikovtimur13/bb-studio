@@ -1,0 +1,25 @@
+@import 'styles/variables';
+
+.form{
+
+
+  &__group{
+
+  }
+
+  &__label{
+
+  }
+
+  &__input{
+    border-bottom: 1px solid#EAE3D0;
+  }
+
+  &__submit{
+
+  }
+
+  &__error{
+    color: #e03638;
+  }
+}

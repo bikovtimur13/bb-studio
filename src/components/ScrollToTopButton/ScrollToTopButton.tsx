@@ -1,11 +1,10 @@
-import { useState } from "react";
+import React from 'react';
 import Image from 'next/image';
 
 import styles from './ScrollToTopButton.module.scss';
 import faArrowUp from "/public/images/icons/bb-to-top-scroll-btn.svg";
 
 const ScrollToTopButton = () => {
-  const [isVisible, setIsVisible] = useState(false);
 
   // Прокрутка страницы вверх
   const scrollToTop = () => {

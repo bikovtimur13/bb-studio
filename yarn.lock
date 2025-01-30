@@ -70,6 +70,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@hookform/resolvers@npm:^3.10.0":
+  version: 3.10.0
+  resolution: "@hookform/resolvers@npm:3.10.0"
+  peerDependencies:
+    react-hook-form: ^7.0.0
+  checksum: 10c0/7ee44533b4cdc28c4fa2a94894c735411e5a1f830f4a617c580533321a9b901df0cc8c1e2fad81ad8d55154ebc5cb844cf9c116a3148ffae2bc48758c33cbb8e
+  languageName: node
+  linkType: hard
+
 "@humanwhocodes/config-array@npm:^0.11.13":
   version: 0.11.14
   resolution: "@humanwhocodes/config-array@npm:0.11.14"
@@ -390,10 +399,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"abbrev@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "abbrev@npm:2.0.0"
-  checksum: 10c0/f742a5a107473946f426c691c08daba61a1d15942616f300b5d32fd735be88fef5cba24201757b6c407fd564555fb48c751cfa33519b2605c8a7aadd22baf372
+"abbrev@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "abbrev@npm:3.0.0"
+  checksum: 10c0/049704186396f571650eb7b22ed3627b77a5aedf98bb83caf2eac81ca2a3e25e795394b0464cfb2d6076df3db6a5312139eac5b6a126ca296ac53c5008069c28
   languageName: node
   linkType: hard
 
@@ -674,6 +683,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "bb-studio@workspace:."
   dependencies:
+    "@hookform/resolvers": "npm:^3.10.0"
     "@types/node": "npm:^20"
     "@types/react": "npm:^18"
     "@types/react-dom": "npm:^18"
@@ -685,8 +695,10 @@ __metadata:
     postcss: "npm:^8.5.1"
     react: "npm:^18"
     react-dom: "npm:^18"
+    react-hook-form: "npm:^7.54.2"
     sass: "npm:^1.70.0"
     typescript: "npm:^5"
+    zod: "npm:^3.24.1"
   languageName: unknown
   linkType: soft
 
@@ -2651,13 +2663,13 @@ __metadata:
   linkType: hard
 
 "nopt@npm:^8.0.0":
-  version: 8.0.0
-  resolution: "nopt@npm:8.0.0"
+  version: 8.1.0
+  resolution: "nopt@npm:8.1.0"
   dependencies:
-    abbrev: "npm:^2.0.0"
+    abbrev: "npm:^3.0.0"
   bin:
     nopt: bin/nopt.js
-  checksum: 10c0/19cb986f79abaca2d0f0b560021da7b32ee6fcc3de48f3eaeb0c324d36755c17754f886a754c091f01f740c17caf7d6aea8237b7fbaf39f476ae5e30a249f18f
+  checksum: 10c0/62e9ea70c7a3eb91d162d2c706b6606c041e4e7b547cbbb48f8b3695af457dd6479904d7ace600856bf923dd8d1ed0696f06195c8c20f02ac87c1da0e1d315ef
   languageName: node
   linkType: hard
 
@@ -3003,6 +3015,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-hook-form@npm:^7.54.2":
+  version: 7.54.2
+  resolution: "react-hook-form@npm:7.54.2"
+  peerDependencies:
+    react: ^16.8.0 || ^17 || ^18 || ^19
+  checksum: 10c0/6eebead2900e3d369a989e7a20429f390dc75b3897142aa3107f1f6dabb9ae64fed201ea98cdcd8676e40466c97748aeb0c0d83264f5bd3a84dbc0b8e4863415
+  languageName: node
+  linkType: hard
+
 "react-is@npm:^16.13.1":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
@@ -3234,11 +3255,11 @@ __metadata:
   linkType: hard
 
 "semver@npm:^7.3.5":
-  version: 7.6.3
-  resolution: "semver@npm:7.6.3"
+  version: 7.7.0
+  resolution: "semver@npm:7.7.0"
   bin:
     semver: bin/semver.js
-  checksum: 10c0/88f33e148b210c153873cb08cfe1e281d518aaa9a666d4d148add6560db5cd3c582f3a08ccb91f38d5f379ead256da9931234ed122057f40bb5766e65e58adaf
+  checksum: 10c0/bcd1c03209b4be7d8ca86c976a0410beba7d4ec1d49d846a4be154b958db1ff5eaee50760c1d4f4070b19dee3236b8672d3e09642c53ea23740398bba2538a2d
   languageName: node
   linkType: hard
 
@@ -3872,5 +3893,12 @@ __metadata:
   version: 0.1.0
   resolution: "yocto-queue@npm:0.1.0"
   checksum: 10c0/dceb44c28578b31641e13695d200d34ec4ab3966a5729814d5445b194933c096b7ced71494ce53a0e8820685d1d010df8b2422e5bf2cdea7e469d97ffbea306f
+  languageName: node
+  linkType: hard
+
+"zod@npm:^3.24.1":
+  version: 3.24.1
+  resolution: "zod@npm:3.24.1"
+  checksum: 10c0/0223d21dbaa15d8928fe0da3b54696391d8e3e1e2d0283a1a070b5980a1dbba945ce631c2d1eccc088fdbad0f2dfa40155590bf83732d3ac4fcca2cc9237591b
   languageName: node
   linkType: hard

@@ -22,6 +22,10 @@
   font: inherit;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Body color */
 body{
   /* background-color: rgb(255, 255, 255); */
