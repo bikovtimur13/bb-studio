@@ -1,34 +1,51 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from "react";
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import * as z from 'zod';
 
+import { feedbackSchema } from "@/lib/validations/feedback";
+import { FeedbackFormData } from "@/lib/types/feedback";
 import styles from './FeedbackForm.module.scss';
 
 // Форма обратной связи
-// Схема валидации с использованием Zod
-const formSchema = z.object({
-  name: z.string().min(1, { message: 'Имя обязательно' }),
-  email: z.string().email({ message: 'Некорректный email' }),
-  phone: z.string().min(10, { message: 'Телефон должен содержать минимум 10 символов' }),
-  company: z.string().optional(),
-});
-
-type FormData = z.infer<typeof formSchema>;
 
 const FeedbackForm: React.FC = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<FormData>({
-    resolver: zodResolver(formSchema),
+  } = useForm<FeedbackFormData>({
+    resolver: zodResolver(feedbackSchema),
   });
 
-  const onSubmit: SubmitHandler<FormData> = (data) => {
-    console.log(data); // Обработка данных формы
+  const onSubmit: SubmitHandler<FeedbackFormData> = async (data) => {
+    // Обработка данных формы
+    // Здесь добавить логику отправки данных на сервер
+    console.log(data);
+
+    try {
+      const response = await fetch("/api/feedback", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+      if (!response.ok) {
+        console.warn("Ошибка при отправке данных")
+        throw new Error("Ошибка при отправке данных");
+      }
+      setSubmitSuccess(true);
+    } catch (err) {
+      setSubmitError("Произошла ошибка при отправке формы. Пожалуйста, попробуйте еще раз.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
