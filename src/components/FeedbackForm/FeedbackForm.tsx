@@ -37,6 +37,8 @@ const FeedbackForm: React.FC = () => {
         body: JSON.stringify(data),
       });
       if (!response.ok) {
+        console.log(response);
+
         console.warn("Ошибка при отправке данных")
         throw new Error("Ошибка при отправке данных");
       }
