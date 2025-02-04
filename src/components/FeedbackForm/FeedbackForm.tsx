@@ -52,61 +52,69 @@ const FeedbackForm: React.FC = () => {
 
   return (
     <div className='main-wrapper'>
-      <form onSubmit={handleSubmit(onSubmit)} id={"contactUsForm"} className={styles.form}>
-        <div className={styles.form__group}>
-          <label htmlFor="name" className={styles.form__label}>
-            Имя
-          </label>
-          <input
-            id="name"
+      <div className={styles.form}>
+        <div className={styles.form__container}>
+          <div className={styles.form__description}>
+            <p className={styles.form__heading}>
+              мы на связи
+            </p>
+            <p className={styles.form__subHeading}>
+              Обращайтесь за консультацией,<br className="br-desc" /> и мы решим ваш вопрос. В другом месте вас обманут ещё больше.
+            </p>
+            <p className={styles.form__text}>Так же Вы можете написать нам на почту <a href="mailto:delobykova@yandex.com" className={styles.form__mail}> delobykova@yandex.com</a></p>
+          </div>
 
-            {...register('name')}
-            className={styles.form__input}
-          />
-          {errors.name && <p className={styles.form__error}>{errors.name.message}</p>}
+          <form onSubmit={handleSubmit(onSubmit)} id={"contactUsForm"} className={styles.form__form}>
+            <div className={styles.form__group}>
+              <input
+                id="name"
+                placeholder="Имя"
+                {...register('name')}
+                className={styles.form__input}
+              />
+              <span className={styles.form__activeBar}></span>
+              {errors.name && <p className={styles.form__error}>{errors.name.message}</p>}
+            </div>
+            <div className={styles.form__group}>
+              <input
+                id="email"
+                type="email"
+                placeholder="E-Mail"
+                {...register('email')}
+                className={styles.form__input}
+              />
+              <span className={styles.form__activeBar}></span>
+              {errors.email && <p className={styles.form__error}>{errors.email.message}</p>}
+            </div>
+            <div className={styles.form__group}>
+              <input
+                id="phone"
+                type="tel"
+                placeholder="Телефон"
+                {...register('phone')}
+                className={styles.form__input}
+              />
+              <span className={styles.form__activeBar}></span>
+              {errors.phone && <p className={styles.form__error}>{errors.phone.message}</p>}
+            </div>
+            <div className={styles.form__group}>
+              <input
+                id="company"
+                placeholder="Компания или сфера бизнеса"
+                {...register('company')}
+                className={styles.form__input}
+              />
+              <span className={styles.form__activeBar}></span>
+            </div>
+            <button
+              type="submit"
+              className={styles.form__submit}
+            >
+              Оставить заявку
+            </button>
+          </form>
         </div>
-        <div className={styles.form__group}>
-          <label htmlFor="email" className={styles.form__label}>
-            Email
-          </label>
-          <input
-            id="email"
-            type="email"
-            placeholder="Email"
-            {...register('email')}
-            className={styles.form__input}
-          />
-          {errors.email && <p className={styles.form__error}>{errors.email.message}</p>}
-        </div>
-        <div className={styles.form__group}>
-          <label htmlFor="phone" className={styles.form__label}>
-            Телефон
-          </label>
-          <input
-            id="phone"
-            type="tel"
-            {...register('phone')}
-            className={styles.form__input}
-          />
-          {errors.phone && <p className={styles.form__error}>{errors.phone.message}</p>}
-        </div>
-        <div className={styles.form__group}>
-          <label htmlFor="company" className={styles.form__label}>
-            Наименование компании (необязательно)
-          </label>
-          <input
-            id="company"
-            {...register('company')}
-            className={styles.form__input}
-          />
-        </div>
-        <button
-          type="submit"
-          className={styles.form__submit}
-        >
-          Отправить
-        </button>
-      </form>
+      </div>
     </div>
   );
 

@@ -166,3 +166,19 @@ ul li {
       /* padding-top:24px */
   }
 }
+
+.br-desc {
+  display: block;
+}
+.br-mob {
+  display: none;
+}
+@media all and (max-width: 767px) {
+  .br-desc {
+    display: none;
+  }
+  .br-mob{
+    display: block;
+  }
+}
+
