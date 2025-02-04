@@ -24,6 +24,7 @@ const FeedbackForm: React.FC = () => {
   });
 
   const onSubmit: SubmitHandler<FeedbackFormData> = async (data) => {
+    // TODO
     // Обработка данных формы
     // Здесь добавить логику отправки данных на сервер
     console.log(data);
