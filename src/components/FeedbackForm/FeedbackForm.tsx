@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 
@@ -14,6 +14,7 @@ const FeedbackForm: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [isError, setIsError] = useState(false); // Состояние для ошибки кнопки
 
   const {
     register,
@@ -22,6 +23,15 @@ const FeedbackForm: React.FC = () => {
   } = useForm<FeedbackFormData>({
     resolver: zodResolver(feedbackSchema),
   });
+
+  useEffect(() => {
+    if (isError) {
+      const timer = setTimeout(() => {
+        setIsError(false);
+      }, 2400);
+      return () => clearTimeout(timer);
+    }
+  }, [isError]);
 
   const onSubmit: SubmitHandler<FeedbackFormData> = async (data) => {
     // TODO
@@ -37,15 +47,15 @@ const FeedbackForm: React.FC = () => {
         },
         body: JSON.stringify(data),
       });
-      if (!response.ok) {
-        console.log(response);
 
+      if (!response.ok) {
         console.warn("Ошибка при отправке данных")
         throw new Error("Ошибка при отправке данных");
       }
       setSubmitSuccess(true);
     } catch (err) {
       setSubmitError("Произошла ошибка при отправке формы. Пожалуйста, попробуйте еще раз.");
+      setIsError(true);
     } finally {
       setIsSubmitting(false);
     }
@@ -109,7 +119,7 @@ const FeedbackForm: React.FC = () => {
             </div>
             <button
               type="submit"
-              className={styles.form__submit}
+              className={`${styles.form__submit} ${isError ? styles.form__submitError : ''}`}
             >
               Оставить заявку
             </button>

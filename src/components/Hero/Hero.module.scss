@@ -21,6 +21,12 @@
     @include nlg{
       width: 92%;
     }
+
+    @include nsm{
+      width: 100%;
+      transform: none;
+      margin-bottom: 30vw;
+    }
   }
 
   &__text{
@@ -33,6 +39,11 @@
 
     @include nlg{
       font-size: Clamp(20px, 2.5vw,32px);
+    }
+
+    @include nsm{
+      font-size: 6.55vw;
+      line-height: 8vw;
     }
   }
 

@@ -9,7 +9,8 @@
     align-items: flex-start;
 
     @include nsm{
-
+      flex-direction: column;
+      padding: 0;
     }
   }
 

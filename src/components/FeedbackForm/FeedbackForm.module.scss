@@ -5,21 +5,41 @@
   &__container{
     display: flex;
     height: 786px;
+
+    @include nsm{
+      position: relative;
+      flex-direction: column;
+      height: auto;
+      padding-top: 12vw;
+    }
   }
 
   &__group{
     position: relative;
     display: flex;
     align-items: center;
-    width: 100%;
+    width: 46vw;
     height: 120px;
     max-width: 776px;
+
+    @include nsm{
+      width: 100%;
+      max-width: unset;
+      height: 23vw;
+      align-items: flex-end;
+    }
   }
 
   &__form{
     width: 50%;
     padding-top: 14px;
     padding-left: 12px;
+
+    @include nsm{
+      width: 100%;
+      padding-top: unset;
+      padding-left: unset;
+    }
   }
 
   &__label{
@@ -73,6 +93,12 @@
     &::placeholder{
       color: #C6C4C4;
     }
+
+    @include nsm{
+      height: 60%;
+      font-size: 4.8vw;
+      line-height: 100%;
+    }
   }
 
   .form__input:focus ~ .form__activeBar {
@@ -88,14 +114,43 @@
     border: 1px solid #EAE3D0;
     border-radius: 46px;
     margin-top: 79px;
-    width: 100%;
+    width: 46vw;
     max-width: 776px;
     height: 85px;
-    transition: all .25 ease-in;
+    animation: none;
 
     &:hover{
       transform: scale(1.015);
       cursor: pointer;
+    }
+
+    @include nsm{
+      width: 100%;
+      max-width: unset;
+      margin-top: 17vw;
+      height: 16vw;
+      margin-bottom: 51vw;
+      border-radius: 8vw;
+      font-size: 5.1vw;
+    }
+  }
+
+  &__submitError{
+    animation: submitError .8s infinite ease-in; 
+  }
+
+  @keyframes submitError {
+    0% {
+      border-color: #EAE3D0; 
+      color: #EAE3D0; 
+    }
+    50% {
+      border-color: #e03638; 
+      color: #e03638; 
+    }
+    100% {
+      border-color: #EAE3D0; 
+      color: #EAE3D0; 
     }
   }
 
@@ -104,36 +159,56 @@
     left: 0;
     bottom: 10px;
     color: #e03638;
+
+    @include nsm{
+      font-size: 3vw;
+      bottom: 0.5vw;
+    }
   }
 
   &__description{
     width: 50%;
     padding-top: 52px;
     padding-left: 37px;
+
+    @include nsm{
+      width: 100%;
+      padding-top: unset;
+      padding-left: unset;
+    }
   }
 
   &__heading{
     font-weight: 500;
-    font-size: 48px;
-    line-height: 67px;
+    font-size: Clamp(28px, 3vw, 48px);
+    line-height: 100%;
     text-transform: uppercase;
     color: #FFFFFF;
-
     margin-bottom: 119px;
 
+    @include nsm{
+      font-size: 8.5vw;
+      margin-bottom: 11vw;
+    }
   }
 
   &__subHeading{
     font-weight: 300;
-    font-size: 48px;
+    font-size: Clamp(28px, 2.5vw, 48px);
     line-height: 157%;
     color: #FFFFFF;
-    margin-bottom: 129px;
+    margin-bottom: 155px;
+
+    @include nsm{
+      font-size: 6vw;
+      line-height: 10vw;
+      margin-bottom: 0;
+    }
   }
 
   &__text{
     font-weight: 400;
-    font-size: 23px;
+    font-size: Clamp(16px, 1.3vw, 23px);
     line-height: 33px;
     color: #FFFFFF;
 
@@ -146,6 +221,14 @@
       &:hover{
         text-decoration: none;
       }
+    }
+
+    @include nsm{
+      position: absolute;
+      bottom: 23vw;
+      left: 0;
+      font-size: 4.7vw;
+      line-height: 8vw;
     }
   }
 }
