@@ -35,7 +35,7 @@ const Footer = () => {
           <ul className={styles.footer__navLinksContainer}>
             {
               navigation.map((item: FooterNavigationType) => (
-                <li className={styles.footer__navLi} key={item.href}>
+                <li key={item.id} className={styles.footer__navLi}>
                   <Link href={item.href}
                     className={styles.footer__navLinks}
                   >

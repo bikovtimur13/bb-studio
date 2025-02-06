@@ -1,3 +1,8 @@
+@import 'swiper/css';
+@import 'swiper/css/navigation'; /* If using navigation arrows */
+@import 'swiper/css/pagination'; /* If using pagination */
+@import 'swiper/css/scrollbar'; /* If using scrollbar */
+
 @font-face {
   font-family: 'Manrope';
   src: url('/fonts/manrope/Manrope-Regular.woff2') format('woff2'),

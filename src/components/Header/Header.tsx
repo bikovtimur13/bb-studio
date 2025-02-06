@@ -33,7 +33,7 @@ const Header = ({ pathname }: HeaderProps) => {
                     <div className={styles.header__navLinksContainer}>
                         {
                             navigation.map((item: NavigationType) => (
-                                <Link href={item.href}
+                                <Link key={item.id} href={item.href}
                                     className={`${styles.header__navLink} ${mainPage || ''} ${activePathName === item.href ? styles['active'] : ''}`}
                                 >
                                     {item.name}

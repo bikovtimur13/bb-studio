@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 
 import Hero from "@/src/components/Hero/Hero";
+// import OurTeam from "@/src/components/OurTeam/OurTeam";
 
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
 
       <main>
         <Hero />
+        {/* <OurTeam /> */}
       </main>
 
     </>
