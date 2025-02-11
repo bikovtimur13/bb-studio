@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 
 import Hero from "@/src/components/Hero/Hero";
+import ClientsSection from "@/src/components/ClientsSection/ClientsSection";
 // import OurTeam from "@/src/components/OurTeam/OurTeam";
 
 
@@ -17,9 +18,9 @@ export default function Home() {
 
       <main>
         <Hero />
+        <ClientsSection />
         {/* <OurTeam /> */}
       </main>
-
     </>
   );
 }

@@ -1,0 +1,27 @@
+@import 'styles/variables';
+
+.clients{
+  border-bottom: 2px solid #B5B5B5;
+  height: 542px;
+
+  &__container{
+    width: 50%;
+    padding-top: 52px;
+    padding-left: 37px;
+  }
+
+  &__heading{
+    font-weight: 500;
+    font-size: Clamp(28px, 3vw, 48px);
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 108px;
+
+    @include nsm{
+      font-size: 8.5vw;
+      margin-bottom: 11vw;
+    }
+  }
+
+}
