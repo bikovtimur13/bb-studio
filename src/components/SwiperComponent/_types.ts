@@ -1,11 +1,13 @@
-export interface Slide {
-  id: number;
-  name: string;
-  position?: string;
-  image: string; // URL изображения
-  description?: string; // Опциональное описание
-}
+import { SwiperProps } from 'swiper/react';
 
 export interface SwiperComponentProps {
-  slides: Slide[];
+  slides: React.ReactNode[];
+  navigation?: boolean;
+  pagination?: boolean | { clickable: boolean };
+  scrollbar?: boolean | { draggable: boolean };
+  autoplay?: boolean | { delay: number; disableOnInteraction: boolean };
+  modules?: any[];
+  spaceBetween?: number;
+  slidesPerView?: number | 'auto';
+  // Добавьте другие параметры Swiper по необходимости
 }
