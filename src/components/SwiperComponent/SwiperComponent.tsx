@@ -14,10 +14,12 @@ import { SwiperComponentProps } from './_types';
 
 const SwiperComponent: React.FC<SwiperComponentProps> = ({
   slides,
-  navigation = true,
-  pagination = true,
-  scrollbar = true,
+  navigation = false,
+  pagination = false,
+  scrollbar = false,
+  centeredSlides = false,
   autoplay = false,
+  loop = false,
   modules = [Navigation, Pagination, Scrollbar, A11y, Autoplay],
   spaceBetween = 50,
   slidesPerView = 1,
@@ -32,6 +34,8 @@ const SwiperComponent: React.FC<SwiperComponentProps> = ({
       pagination={pagination === true ? { clickable: true } : pagination}
       scrollbar={scrollbar === true ? { draggable: true } : scrollbar}
       autoplay={autoplay === true ? { delay: 3000, disableOnInteraction: false } : autoplay}
+      loop={loop}
+      centeredSlides={centeredSlides}
       {...rest} // Передаем остальные параметры Swiper
     >
       {slides.map((slide, index) => (

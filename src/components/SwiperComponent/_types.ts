@@ -6,6 +6,8 @@ export interface SwiperComponentProps {
   pagination?: boolean | { clickable: boolean };
   scrollbar?: boolean | { draggable: boolean };
   autoplay?: boolean | { delay: number; disableOnInteraction: boolean };
+  loop?: boolean;
+  centeredSlides?: boolean;
   modules?: any[];
   spaceBetween?: number;
   slidesPerView?: number | 'auto';
