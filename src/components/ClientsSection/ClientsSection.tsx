@@ -1,7 +1,6 @@
-import React, { FC } from 'react';
+import React from 'react';
 import styles from './ClientsSection.module.scss';
 import SwiperComponent from '../SwiperComponent/SwiperComponent';
-
 import useSWR from 'swr';
 import { Client } from "@/src/components/ClientsSection/_types";
 
@@ -19,7 +18,7 @@ const ClientsSection = () => {
   // Создаем массив слайдов
   const createSlides = (clients: Client[]) => {
     let slidesArray = clients.map((client) => (
-      <a href={client.link} key={client.id} className={styles.clients__link} target='_blank'>
+      <a href={client.link} key={client.id} className={styles.clients__link} target='_blank' rel="noopener noreferrer">
         <img src={client.logo} alt={client.name} className={styles.clients__logo} />
       </a>
     ));
@@ -28,7 +27,7 @@ const ClientsSection = () => {
     while (slidesArray.length < MIN_SLIDES_COUNT) {
       slidesArray = slidesArray.concat(
         clients.map((client) => (
-          <a href={client.link} key={`${client.id}-${slidesArray.length}`} className={styles.clients__link} target='_blank'>
+          <a href={client.link} key={`${client.id}-${slidesArray.length}`} className={styles.clients__link} target='_blank' rel="noopener noreferrer">
             <img src={client.logo} alt={client.name} className={styles.clients__logo} />
           </a>
         ))
@@ -50,11 +49,36 @@ const ClientsSection = () => {
               navigation={true} // Включаем навигацию
               pagination={false} // Настраиваем пагинацию
               scrollbar={false} // Отключаем скроллбар
-              autoplay={true} // Включаем автоплей 
-              spaceBetween={100} // Расстояние между слайдами
-              slidesPerView={5} // Количество слайдов 
+              autoplay={{ delay: 3000, disableOnInteraction: false }} // Включаем автоплей
+              // spaceBetween={20} // Расстояние между слайдами
+              breakpoints={{
+                320: {
+                  slidesPerView: 1,
+                  // spaceBetween: 20,
+                },
+                480: {
+                  slidesPerView: 2,
+                  // spaceBetween: 20,
+                },
+                768: {
+                  slidesPerView: 3,
+                  // spaceBetween: 30,
+                },
+                1024: {
+                  slidesPerView: 3,
+                  // spaceBetween: 40,
+                },
+                1640: {
+                  slidesPerView: 4,
+                  spaceBetween: 100,
+                },
+                1920: {
+                  slidesPerView: 5,
+                  spaceBetween: 100,
+                },
+              }}
               loop={true}
-              centeredSlides={true}
+              centeredSlides={false}
             />
           </div>
         </div>
@@ -62,4 +86,5 @@ const ClientsSection = () => {
     </div>
   );
 };
+
 export default ClientsSection;

@@ -21,8 +21,9 @@ const SwiperComponent: React.FC<SwiperComponentProps> = ({
   autoplay = false,
   loop = false,
   modules = [Navigation, Pagination, Scrollbar, A11y, Autoplay],
-  spaceBetween = 50,
+  spaceBetween = 0,
   slidesPerView = 1,
+  breakpoints,
   ...rest // Остальные параметры Swiper
 }) => {
   return (
@@ -30,6 +31,7 @@ const SwiperComponent: React.FC<SwiperComponentProps> = ({
       modules={modules}
       spaceBetween={spaceBetween}
       slidesPerView={slidesPerView}
+      breakpoints={breakpoints}
       navigation={navigation}
       pagination={pagination === true ? { clickable: true } : pagination}
       scrollbar={scrollbar === true ? { draggable: true } : scrollbar}
