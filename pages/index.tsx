@@ -3,6 +3,7 @@ import Head from "next/head";
 
 import Hero from "@/src/components/Hero/Hero";
 import ClientsSection from "@/src/components/ClientsSection/ClientsSection";
+import AboutUs from "@/src/components/AboutUs/AboutUs";
 // import OurTeam from "@/src/components/OurTeam/OurTeam";
 
 
@@ -18,6 +19,7 @@ export default function Home() {
 
       <main>
         <Hero />
+        <AboutUs />
         <ClientsSection />
         {/* <OurTeam /> */}
       </main>
