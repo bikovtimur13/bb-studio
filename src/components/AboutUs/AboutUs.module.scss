@@ -22,11 +22,14 @@
 
   &__description{
     font-weight: 400;
-    font-size: 36px;
-    line-height: 68px;
-    text-transform: capitalize;
+    font-size: Clamp(18px, 1.6vw, 32px);
+    line-height: Clamp(30px, 3.5vw, 64px);
     color: #FFFFFF;
     margin-bottom: 95px;
+    
+    @include nsm{
+
+    }
 
   }
 
@@ -36,11 +39,17 @@
   }
 
   &__stat{
-
+    &:last-of-type {
+      .aboutUs__valueContainer {
+        align-items: unset;
+        flex-direction: row-reverse;
+      }
+    }
   }
 
   &__valueContainer{
-
+    display: flex;
+    align-items: flex-start;
   }
 
   &__value{

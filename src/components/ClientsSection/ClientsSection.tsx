@@ -9,8 +9,8 @@ const fetcher = (url: string) => fetch(url).then((res) => res.json());
 const ClientsSection = () => {
   const { data, error } = useSWR('/api/clients', fetcher);
 
-  if (error) return <div>Ошибка загрузки данных</div>;
-  if (!data) return <div>Загрузка...</div>;
+  if (!data) return <div className="main-wrapper"><p>Загрузка...</p></div>;
+  if (error) return <div className="main-wrapper"><p>Ошибка: {error}</p></div>;
 
   // Определяем минимальное количество необходимых слайдов
   const MIN_SLIDES_COUNT = 10; // например, 10 слайдов нужно для хорошего отображения

@@ -1,6 +1,5 @@
 import React from "react";
 
-import Image from 'next/image';
 import error404Img from "/public/images/bb-error-404.webp";
 
 const Custom404 = () => {

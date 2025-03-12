@@ -26,8 +26,8 @@ const AboutUs: React.FC = () => {
     fetchData();
   }, []);
 
-  if (loading) return <p>Загрузка...</p>;
-  if (error) return <p>Ошибка: {error}</p>;
+  if (loading) return <div className="main-wrapper"><p>Загрузка...</p></div>;
+  if (error) return <div className="main-wrapper"><p>Ошибка: {error}</p></div>;
 
   return (
     <div className="main-wrapper">
