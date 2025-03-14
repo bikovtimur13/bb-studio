@@ -4,6 +4,7 @@ import Head from "next/head";
 import Hero from "@/src/components/Hero/Hero";
 import ClientsSection from "@/src/components/ClientsSection/ClientsSection";
 import AboutUs from "@/src/components/AboutUs/AboutUs";
+import Reviews from "@/src/components/Reviews/Reviews";
 // import OurTeam from "@/src/components/OurTeam/OurTeam";
 
 
@@ -20,6 +21,7 @@ export default function Home() {
       <main>
         <Hero />
         <AboutUs />
+        <Reviews />
         <ClientsSection />
         {/* <OurTeam /> */}
       </main>

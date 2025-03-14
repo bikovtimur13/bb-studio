@@ -6,6 +6,14 @@
   padding-left: 37px;
   padding-right: 37px;
 
+  @include nsm{
+    height: unset;
+    padding-top: 9vw;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 28vw;
+  }
+
   &__heading{
     font-weight: 500;
     font-size: Clamp(28px, 3vw, 47px);
@@ -16,7 +24,7 @@
 
     @include nsm {
       font-size: 8.5vw;
-      margin-bottom: 11vw;
+      margin-bottom: 12vw;
     }
   }
 
@@ -28,7 +36,9 @@
     margin-bottom: 95px;
     
     @include nsm{
-
+      font-size: 5.35vw;
+      line-height: 10.5vw;
+      margin-bottom: 21vw;
     }
 
   }
@@ -36,13 +46,28 @@
   &__stats{
     display: flex;
     justify-content: space-between;
+
+    @include nsm{
+      flex-direction: column;
+    }
   }
 
   &__stat{
+    @include nsm{
+      margin-bottom: 21vw;
+    }
+
     &:last-of-type {
       .aboutUs__valueContainer {
         align-items: unset;
         flex-direction: row-reverse;
+
+        @include nsm{
+          justify-content: left;
+        }
+      }
+      @include nsm{
+        margin-bottom: 0;
       }
     }
   }
@@ -54,25 +79,37 @@
 
   &__value{
     font-weight: 500;
-    font-size: 190px;
-    line-height: 169px;
+    font-size: Clamp(110px, 12vw, 190px);
+    line-height: Clamp(99px, 12vw, 169px);
     color: #FFFFFF;
 
+    @include nsm{
+      font-size: 33vw;
+      line-height: 30vw;
+    }
   }
 
   &__meta{
     font-weight: 500;
-    font-size: 40px;
-    line-height: 68px;
+    font-size: Clamp(23px, 2vw, 40px);
+    line-height: Clamp(23px, 4vw, 55px);
     color: #FFFFFF;
 
+    @include nsm{
+      font-size: 7vw;
+      line-height: 9vw;
+    }
   }
 
   &__label{
     font-weight: 500;
-    font-size: 40px;
-    line-height: 68px;
+    font-size: Clamp(23px, 2.5vw, 40px);
+    line-height: Clamp(40px, 4vw, 68px);
     color: #FFFFFF;
 
+    @include nsm{
+      font-size: 7vw;
+      line-height: 14vw;
+    }
   }
 }

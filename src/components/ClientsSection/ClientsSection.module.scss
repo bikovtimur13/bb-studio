@@ -7,6 +7,11 @@
   &__container {
     padding-top: 58px;
     padding-left: 37px;
+
+    @include nsm{
+      padding-top: 0;
+      padding-left: 0;
+    }
   }
 
   &__swiperContainer {
