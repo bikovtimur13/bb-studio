@@ -5,7 +5,7 @@ const Reviews: React.FC = () => {
 
   return (
     <div className="main-wrapper">
-      Reviews
+      Reviews Component
     </div>)
 }
 
