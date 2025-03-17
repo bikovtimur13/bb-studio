@@ -1,7 +1,6 @@
 import React from 'react';
 import useSWR from "swr";
 
-
 import SwiperComponent from '../SwiperComponent/SwiperComponent';
 import { TeamMember } from './_types';
 import styles from './OurTeam.module.scss';

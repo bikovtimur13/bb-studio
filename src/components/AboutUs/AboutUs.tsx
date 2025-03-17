@@ -22,7 +22,6 @@ const AboutUs: React.FC = () => {
         setLoading(false);
       }
     };
-
     fetchData();
   }, []);
 

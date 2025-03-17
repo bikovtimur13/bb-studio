@@ -1,2 +1,46 @@
 @import 'styles/variables';
 
+.reviews{
+
+  &__heading{
+    font-weight: 500;
+    font-size: Clamp(28px, 3vw, 47px);
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 68px;
+
+    @include nsm {
+      font-size: 8.5vw;
+      margin-bottom: 12vw;
+    }
+  }
+
+  &__list{
+
+  }
+
+  &__item{
+
+  }
+
+  &__text{
+
+  }
+
+  &__meta{
+
+  }
+
+  &__logo{
+
+  }
+
+  &__company{
+
+  }
+
+  &__noReviews{
+    
+  }
+}
