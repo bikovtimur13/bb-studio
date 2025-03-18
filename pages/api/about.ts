@@ -7,7 +7,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<AboutU
     stats: [
       { value: "5", label: "Работаем для вас", meta: "Лет" },
       { value: "50+", label: "Выполненных проектов" },
-      { value: "10", label: "Странах", meta: "В" },
+      { value: "3", label: "Странах", meta: "В" },
     ],
   });
 }

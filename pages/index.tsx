@@ -19,10 +19,12 @@ export default function Home() {
       </Head>
 
       <main>
-        <Hero />
-        <AboutUs />
-        <Reviews />
-        <ClientsSection />
+        <div className="main-wrapper">
+          <Hero />
+          <AboutUs />
+          <Reviews />
+          <ClientsSection />
+        </div>
         {/* <OurTeam /> */}
       </main>
     </>

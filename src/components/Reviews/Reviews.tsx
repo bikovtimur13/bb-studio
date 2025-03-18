@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from "./Reviews.module.scss";
 import { ReviewData } from './_types';
+import SwiperComponent from '../SwiperComponent/SwiperComponent';
 
 const Reviews: React.FC = () => {
   const [reviews, setReviews] = useState<ReviewData[]>([]);
@@ -28,35 +29,30 @@ const Reviews: React.FC = () => {
   if (loading) return <div className="main-wrapper"><p>Загрузка...</p></div>;
   if (error) return <div className="main-wrapper"><p>Ошибка: {error}</p></div>;
 
+  // Ограничиваем вывод до двух первых отзывов
+  const displayedReviews = reviews.slice(0, 2);
+
   return (
-    <div className="main-wrapper">
-      <section className={styles.reviews}>
-        <h2 className={styles.reviews__heading}>Отзывы</h2>
-        {reviews.length > 0 ? (
-          <div className={styles.reviews__list}>
-
-            {reviews.map((review, index) => (
-              <div key={index} className={styles.reviews__item}>
-
-                <p className={styles.reviews__text}>{review.review}</p>
-                <div className={styles.reviews__meta}>
-                  <img
-                    src={review.image}
-                    alt={`Логотип компании ${review.company}`}
-                    className={styles.reviews__logo}
-                  />
-                  <span className={styles.reviews__company}>{review.company}</span>
-                </div>
-
-              </div>
-            ))}
-
+    <section className={styles.reviews}>
+      <h2 className={styles.reviews__heading}>Отзывы</h2>
+      {displayedReviews.length > 0 ? (
+        displayedReviews.map((review, index) => (
+          <div key={index} className={styles.reviews__item}>
+            <p className={styles.reviews__text}>{review.review}</p>
+            <div className={styles.reviews__meta}>
+              <img
+                src={review.image}
+                alt={`Логотип компании ${review.company}`}
+                className={styles.reviews__logo}
+              />
+              <div className={styles.reviews__company}>{review.company}</div>
+            </div>
           </div>
-        ) : (
-          <p className={styles.reviews__noReviews}>Нет отзывов для отображения.</p>
-        )}
-      </section>
-    </div>
+        ))
+      ) : (
+        <p className={styles.reviews__noReviews}>Нет отзывов для отображения.</p>
+      )}
+    </section>
   );
 };
 

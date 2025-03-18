@@ -19,6 +19,7 @@ const SwiperComponent: React.FC<SwiperComponentProps> = ({
   scrollbar = false,
   centeredSlides = false,
   autoplay = false,
+  direction = 'horizontal',
   loop = false,
   modules = [Navigation, Pagination, Scrollbar, A11y, Autoplay],
   spaceBetween = 0,
@@ -38,6 +39,7 @@ const SwiperComponent: React.FC<SwiperComponentProps> = ({
       autoplay={autoplay === true ? { delay: 3000, disableOnInteraction: false } : autoplay}
       loop={loop}
       centeredSlides={centeredSlides}
+      direction={direction}
       {...rest} // Передаем остальные параметры Swiper
     >
       {slides.map((slide, index) => (

@@ -37,7 +37,7 @@ const FeedbackForm: React.FC = () => {
     // TODO
     // Обработка данных формы
     // Здесь добавить логику отправки данных на сервер
-    console.log(data);
+    // console.log(data);
 
     try {
       const response = await fetch("/api/feedback", {

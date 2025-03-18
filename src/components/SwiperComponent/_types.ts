@@ -11,5 +11,6 @@ export interface SwiperComponentProps {
   modules?: any[];
   spaceBetween?: number;
   slidesPerView?: number | 'auto';
+  direction?: 'horizontal' | 'vertical';
   breakpoints?: { [key: number]: SwiperProps };
 }

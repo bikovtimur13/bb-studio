@@ -4,9 +4,24 @@ import { ReviewData } from "@/src/components/Reviews/_types";
 export default function handler(req: NextApiRequest, res: NextApiResponse<ReviewData[]>) {
   res.status(200).json([
     {
-      review: "What sets them apart from so many other teams is much more than just the work they launch. Their highly collaborative, thoughtful, and generous approach to doing business makes the journey to launch day a true pleasure and ensures their clients end up with even better results than they ever imagined.",
-      image: "test.png",
+      review: "ТЕСТ! Работа с этой веб- студией превзошла все ожидания! Профессиональный подход, креативные решения и безупречная реализация проекта сделали сотрудничество истинным удовольствием.",
+      image: "/images/reviews/bb-reviews-option-1-test.webp",
       company: "Test Company"
-    }
+    },
+    {
+      review: "ТЕСТ! Отличная команда специалистов создала нам сайт мечты. Уникальный дизайн, удобная навигация и отличная оптимизация - всё это воплотили они в реальность!",
+      image: "/images/reviews/bb-reviews-option-2-test.webp",
+      company: "Test Company"
+    },
+    {
+      review: "ТЕСТ! Работа с этой веб- студией превзошла все ожидания! Профессиональный подход, креативные решения и безупречная реализация проекта сделали сотрудничество истинным удовольствием.",
+      image: "/images/reviews/bb-reviews-option-1-test.webp",
+      company: "Test Company"
+    },
+    {
+      review: "ТЕСТ! Отличная команда специалистов создала нам сайт мечты. Уникальный дизайн, удобная навигация и отличная оптимизация - всё это воплотили они в реальность!",
+      image: "/images/reviews/bb-reviews-option-2-test.webp",
+      company: "Test Company"
+    },
   ]);
 }

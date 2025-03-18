@@ -29,23 +29,21 @@ const AboutUs: React.FC = () => {
   if (error) return <div className="main-wrapper"><p>Ошибка: {error}</p></div>;
 
   return (
-    <div className="main-wrapper">
-      <section className={styles.aboutUs}>
-        <h2 className={styles.aboutUs__heading}>О нас</h2>
-        <p className={styles.aboutUs__description}>{data?.description}</p>
-        <div className={styles.aboutUs__stats}>
-          {data?.stats.map((stat, index) => (
-            <div key={index} className={styles.aboutUs__stat}>
-              <div className={styles.aboutUs__valueContainer}>
-                <span className={styles.aboutUs__value}>{stat.value}</span>
-                <span className={styles.aboutUs__meta}>{stat.meta}</span>
-              </div>
-              <span className={styles.aboutUs__label}>{stat.label}</span>
+    <section className={styles.aboutUs}>
+      <h2 className={styles.aboutUs__heading}>О нас</h2>
+      <p className={styles.aboutUs__description}>{data?.description}</p>
+      <div className={styles.aboutUs__stats}>
+        {data?.stats.map((stat, index) => (
+          <div key={index} className={styles.aboutUs__stat}>
+            <div className={styles.aboutUs__valueContainer}>
+              <span className={styles.aboutUs__value}>{stat.value}</span>
+              <span className={styles.aboutUs__meta}>{stat.meta}</span>
             </div>
-          ))}
-        </div>
-      </section >
-    </div >
+            <span className={styles.aboutUs__label}>{stat.label}</span>
+          </div>
+        ))}
+      </div>
+    </section >
   );
 };
 
