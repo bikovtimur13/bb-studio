@@ -38,6 +38,8 @@
 
         &:hover{
             transform: translateY(-7px);
+            padding-bottom: 5px;
+            border-bottom: 1.5px solid #EAE3D0;
         }
 
         &.main{
@@ -45,9 +47,13 @@
             line-height: 43px;
             margin-right: clamp(71px, 5.2vw, 111px);
             transition: all 0.35s ease-in-out;
-    
+
             &:first-of-type{
                 margin-left: 44px;
+                
+                @include nlgm{
+                    margin-left: 0;
+                }
             }
             &:last-of-type{
                 margin-right: unset;
